@@ -2,12 +2,13 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '중앙아시아 투어 2026 — 아이스타홀딩스',
-  description: '카자흐스탄·키르기스스탄 4박6일 특별 투어 | 2026년 8월 18일 출발',
+  metadataBase: new URL('https://landing-nine-lac.vercel.app'),
+  title: '(주)아이스타홀딩스 키르기스스탄4박6일 첫 여정!',
+  description: '26년8월18일(화)~23(일), 4박6일 | 자연의 경이로움과 시장 기회를 발견하는 여행!',
   openGraph: {
-    title: '중앙아시아 카자흐스탄·키르기스스탄 4박6일 특별 투어',
-    description: '2026년 8월 18일 출발 | 아이스타홀딩스 임직원 특별 투어',
-    images: ['https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=1200'],
+    title: '(주)아이스타홀딩스 키르기스스탄4박6일 첫 여정!',
+    description: '26년8월18일(화)~23(일), 4박6일 | 자연의 경이로움과 시장 기회를 발견하는 여행!',
+    images: ['/og-image.jpg'],
   },
 }
 
