@@ -634,6 +634,19 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* 카카오톡 플로팅 버튼 */}
+      <a
+        href="http://pf.kakao.com/_dQQgn/chat"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#FEE500] hover:bg-[#f5dc00] text-[#3A1D1D] font-bold text-sm px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 group"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3C6.48 3 2 6.92 2 11.75c0 3.01 1.74 5.67 4.37 7.24L5.25 22l3.92-2.06c.9.25 1.85.38 2.83.38 5.52 0 10-3.92 10-8.75S17.52 3 12 3z"/>
+        </svg>
+        <span>카카오톡 상담</span>
+      </a>
+
       {/* FOOTER */}
       <footer className="bg-[#07162a] py-10">
         <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-6">
