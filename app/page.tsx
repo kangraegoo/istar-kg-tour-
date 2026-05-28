@@ -259,7 +259,7 @@ export default function LandingPage() {
       </header>
 
       {/* HERO */}
-      <section className="relative w-full aspect-video min-h-[280px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full aspect-video min-h-[55vh] sm:min-h-[320px] flex items-center justify-center overflow-hidden">
         {/* 배경 이미지: 항상 base layer (영상 로딩 중 fallback) */}
         <div
           className="absolute inset-0"
@@ -278,19 +278,19 @@ export default function LandingPage() {
         )}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0d2340]/70 via-[#0d2340]/50 to-[#0d2340]/85" />
         <div className="relative z-10 text-center px-4 animate-fadeInUp">
-          <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-400/40 text-amber-300 px-4 py-1.5 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-1.5 bg-amber-400/20 border border-amber-400/40 text-amber-300 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-sm font-medium mb-3 sm:mb-6 backdrop-blur-sm">
             <span>✈️</span><span>2026년 8월 18일 출발 · 4박6일</span>
           </div>
-          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-4">
+          <h1 className="text-white text-2xl sm:text-5xl md:text-6xl font-black leading-tight mb-2 sm:mb-4">
             중앙아시아<br /><span className="text-amber-400">카자흐스탄 · 키르기스스탄</span>
           </h1>
-          <p className="text-white/80 text-xl sm:text-2xl font-light mb-2">4박6일 첫 일정</p>
-          <p className="text-white/50 text-sm mb-10">차른협곡 · 알틴아라샨 · 이식쿨 호수 · 침블락</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <button onClick={() => scrollTo(applyRef)} className="px-8 py-3.5 bg-amber-400 hover:bg-amber-300 text-[#0d2340] font-bold rounded-xl text-base transition-all shadow-lg hover:-translate-y-0.5">
+          <p className="text-white/80 text-sm sm:text-2xl font-light mb-1 sm:mb-2">4박6일 첫 일정</p>
+          <p className="text-white/50 text-[11px] sm:text-sm mb-4 sm:mb-10">차른협곡 · 알틴아라샨 · 이식쿨 호수 · 침블락</p>
+          <div className="flex flex-row items-center justify-center gap-2 sm:gap-3">
+            <button onClick={() => scrollTo(applyRef)} className="px-4 py-2 sm:px-8 sm:py-3.5 bg-amber-400 hover:bg-amber-300 text-[#0d2340] font-bold rounded-lg sm:rounded-xl text-xs sm:text-base transition-all shadow-lg hover:-translate-y-0.5">
               참가 신청하기
             </button>
-            <button onClick={() => scrollTo(itineraryRef)} className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-base transition-all border border-white/20 backdrop-blur-sm">
+            <button onClick={() => scrollTo(itineraryRef)} className="px-4 py-2 sm:px-8 sm:py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg sm:rounded-xl text-xs sm:text-base transition-all border border-white/20 backdrop-blur-sm">
               일정 보기
             </button>
           </div>
@@ -303,19 +303,20 @@ export default function LandingPage() {
       {/* 하이라이트 */}
       <section className="bg-[#0d2340] py-12 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3">
             {[
               { num: '01', icon: '🏔️', title: '대자연 어드벤처', sub: '차른협곡 하이킹\n& 알틴아라샨 트레킹' },
               { num: '02', icon: '⛵', title: '이식쿨 크루즈', sub: '세계 2위 산악호수\n유람선 & 핑거푸드' },
               { num: '03', icon: '♨️', title: '노천온천 힐링', sub: '설산 아래\n천연 유황온천' },
               { num: '04', icon: '🏨', title: '프리미엄 숙박', sub: '전 일정\n4~5성급 호텔' },
               { num: '05', icon: '🤝', title: '회원 전용 스페셜', sub: '아이스타 회원전용\n& 네트워킹' },
+              { num: '06', icon: '🗺️', title: '한국인 가이드', sub: '전문 한국어 가이드\n& 알찬 식사 구성' },
             ].map(item => (
-              <div key={item.num} className="flex flex-col items-center text-center px-3 py-5 rounded-xl border border-white/10 hover:border-amber-400/40 hover:bg-white/5 transition-all">
-                <div className="text-[20px] font-bold text-amber-400/50 tracking-widest mb-2">{item.num}</div>
-                <div className="text-2xl mb-2">{item.icon}</div>
-                <div className="text-white font-bold text-sm mb-1.5">{item.title}</div>
-                <div className="text-white/40 text-[11px] leading-relaxed whitespace-pre-line">{item.sub}</div>
+              <div key={item.num} className="flex flex-col items-center text-center px-1.5 sm:px-3 py-3 sm:py-5 rounded-xl border border-white/10 hover:border-amber-400/40 hover:bg-white/5 transition-all">
+                <div className="text-[10px] sm:text-[20px] font-bold text-amber-400/50 tracking-widest mb-1 sm:mb-2">{item.num}</div>
+                <div className="text-lg sm:text-2xl mb-1 sm:mb-2">{item.icon}</div>
+                <div className="text-white font-bold text-[9px] sm:text-sm mb-0 sm:mb-1.5 leading-tight">{item.title}</div>
+                <div className="hidden sm:block text-white/40 text-[11px] leading-relaxed whitespace-pre-line">{item.sub}</div>
               </div>
             ))}
           </div>
@@ -431,7 +432,7 @@ export default function LandingPage() {
           ) : (
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="grid md:grid-cols-5">
-                <div className="md:col-span-2 relative h-56 md:h-auto min-h-[260px] overflow-hidden">
+                <div className="md:col-span-2 relative h-64 sm:h-72 md:h-auto min-h-[260px] overflow-hidden">
                   <img
                     key={displayImgs[safeIdx]}
                     src={displayImgs[safeIdx]}
