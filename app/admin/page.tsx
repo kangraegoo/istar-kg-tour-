@@ -7,15 +7,15 @@ const HOTEL_KEYS = [
   { key: 'hotel_1_image', label: '1박 — Plaza Hotel Almaty (카자흐스탄 알마티)' },
   { key: 'hotel_2_image', label: '2박 — Kapriz Karakol Hotel (키르기스 카라콜)' },
   { key: 'hotel_3_image', label: '3박 — Baytur Resort (키르기스 촐폰아타)' },
-  { key: 'hotel_4_image', label: '4박 — Damas International Hotel (키르기스 비슈케크)' },
+  { key: 'hotel_4_image', label: '4박 — Issyk-Ata Hot Springs (키르기스 으슥아따)' },
 ]
 
 const DAY_LABELS = [
   'DAY 1 — 8월 18일 (화) · 인천 → 알마티',
   'DAY 2 — 8월 19일 (수) · 차른협곡 → 카라콜',
   'DAY 3 — 8월 20일 (목) · 알틴아라샨 → 촐폰아타',
-  'DAY 4 — 8월 21일 (금) · 촐폰아타 → 비슈케크',
-  'DAY 5 — 8월 22일 (토) · 비슈케크 → 알마티 공항',
+  'DAY 4 — 8월 21일 (금) · 촐폰아타 → 으슥아따',
+  'DAY 5 — 8월 22일 (토) · 으슥아따 → 알마티',
   'DAY 6 — 8월 23일 (일) · 인천 도착',
 ]
 

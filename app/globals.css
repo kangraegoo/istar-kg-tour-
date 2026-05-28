@@ -5,7 +5,7 @@ html { scroll-behavior: smooth; }
 body {
   background: #ffffff;
   color: #111827;
-  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
+  font-family: 'Nanum Square', 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
 }
 
 @keyframes fadeInUp {

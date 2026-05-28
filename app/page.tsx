@@ -48,32 +48,33 @@ const ITINERARY = [
     image: 'https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=800&q=80',
   },
   {
-    day: 4, label: 'DAY 4', date: '8월 21일 (금)', regions: '촐폰아타 → 비슈케크',
-    transport: '전용차량', mealDetail: '조:호텔식 / 중:현지식 / 석:현지식',
+    day: 4, label: 'DAY 4', date: '8월 21일 (금)', regions: '촐폰아타 → 으슥아따',
+    transport: '전용차량', mealDetail: '조:호텔식 / 중:현지식 / 석:특식(바비큐)',
     schedules: [
       { time: '', desc: '이식쿨 호수 유람선 크루즈 체험 (핑거푸드·음료 제공)' },
       { time: '', desc: '암각화 / 르호드도 박물관 방문' },
-      { time: '', desc: '아크베르메트 노천온천 체험' },
-      { time: '', desc: '비슈케크로 이동, 도착 후 석식' },
-      { time: '', desc: '호텔 체크인' },
+      { time: '', desc: '으슥아따(Issyk-Ata) 노천온천으로 이동' },
+      { time: '', desc: '석식 및 노천유황온천 / 사우나 체험' },
+      { time: '', desc: '호텔 이동 및 체크인' },
     ],
-    hotel: { name: 'Damas International Hotel', nameKo: '다마스 인터내셔널 호텔', stars: 4, location: '비슈케크, 키르기스스탄', note: '' },
-    highlight: '이식쿨 유람선 크루즈 & 노천온천',
+    hotel: { name: 'Aksaray Resort', nameKo: '아크사라이 리조트', stars: 4, location: '으슥아따, 키르기스스탄', note: '' },
+    highlight: '이식쿨 유람선 크루즈 & 으슥아따 노천유황온천',
     image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
   },
   {
-    day: 5, label: 'DAY 5', date: '8월 22일 (토)', regions: '비슈케크 → 알마티 공항',
-    transport: '전용차량 / ZE136', mealDetail: '조:호텔식 / 중:현지식 / 석:한식',
+    day: 5, label: 'DAY 5', date: '8월 22일 (토)', regions: '으슥아따 → 알마티',
+    transport: '전용차량 / ZE136', mealDetail: '조:호텔식 / 중:한식 / 석:현지식',
     schedules: [
-      { time: '',      desc: '조식 후 가이드 미팅' },
-      { time: '',      desc: '아이스타 본사 방문 미팅 (특별 일정)' },
-      { time: '',      desc: '중식 후 비슈케크 시내 관광투어' },
-      { time: '',      desc: '비슈케크 고르다이 국경 통과 (키르기스→카자흐스탄)' },
-      { time: '',      desc: '알마티 도착, 석식(한식) 후 공항 이동' },
+      { time: '',      desc: '조식 후 알마티 이동 (까라수 국경)' },
+      { time: '',      desc: '키르기스스탄 출국수속 / 국경통과 / 카자흐스탄 입국수속' },
+      { time: '',      desc: '알마티 도착 후 중식 (한식)' },
+      { time: '',      desc: '침블락 이동 케이블카 탑승 (3,200m)' },
+      { time: '',      desc: '시내 이동 석식 후 아르바트 거리 체험' },
+      { time: '',      desc: '알마티 국제공항으로 이동' },
       { time: '23:40', desc: '알마티 국제공항 탑승 수속 (ZE136)' },
     ],
     hotel: { name: '기내 숙박', nameKo: '기내', stars: 0, location: '알마티 출발', note: '' },
-    highlight: '아이스타 본사 방문 & 비슈케크 시내 관광',
+    highlight: '침블락 케이블카(3,200m) & 알마티 아르바트 거리',
     image: 'https://images.unsplash.com/photo-1531219572328-a0171b4448a3?w=800&q=80',
   },
   {
@@ -93,16 +94,16 @@ const HOTELS_BASE = [
   { key: 'hotel_1_image', night: '1박 (8.18)', name: 'Plaza Hotel Almaty', nameKo: '플라자 호텔 알마티', stars: 4, location: '카자흐스탄 알마티', desc: '알마티 시내 중심부에 위치한 4성급 호텔. 세련된 인테리어와 편안한 객실로 첫날 여독을 풀기에 최적의 환경을 제공합니다.', fallback: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80' },
   { key: 'hotel_2_image', night: '2박 (8.19)', name: 'Kapriz Karakol Hotel', nameKo: '카프리스 카라콜 호텔', stars: 4, location: '키르기스스탄 카라콜', desc: '톈샨 산맥 기슭의 아름다운 도시 카라콜의 4성급 호텔. 맑은 자연 속에서의 고품격 숙박 경험을 선사합니다.', fallback: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80' },
   { key: 'hotel_3_image', night: '3박 (8.20)', name: 'Baytur Resort', nameKo: '바이투르 리조트', stars: 5, location: '키르기스스탄 촐폰아타', desc: '이식쿨 호수를 바라보는 5성급 프리미엄 리조트. 세계에서 두 번째로 큰 산악 호수의 절경과 함께하는 특별한 하룻밤.', fallback: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80' },
-  { key: 'hotel_4_image', night: '4박 (8.21)', name: 'Damas International Hotel', nameKo: '다마스 인터내셔널 호텔', stars: 4, location: '키르기스스탄 비슈케크', desc: '키르기스스탄 수도 비슈케크 중심부에 위치한 국제 수준의 4성급 호텔. 편리한 접근성과 쾌적한 시설을 갖추고 있습니다.', fallback: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80' },
+  { key: 'hotel_4_image', night: '4박 (8.21)', name: 'Aksaray Resort', nameKo: '아크사라이 리조트', stars: 4, location: '키르기스스탄 으슥아따', desc: '키르기스스탄 대자연 속에 자리한 노천유황온천 리조트. 탁 트인 산악 풍경 아래 유황온천과 사우나를 즐기며 특별한 바비큐 석식과 함께 여행의 피로를 씻어내는 힐링 타임.', fallback: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80' },
 ]
 
 const ATTRACTIONS = [
   { key: 'attraction_1_image', name: '차른협곡', nameEn: 'Charyn Canyon', country: '카자흐스탄', tag: '하이킹', tagColor: 'bg-orange-100 text-orange-700', icon: '🏔️', desc: '"카자흐스탄의 그랜드캐니언"으로 불리는 대협곡. 수백만 년의 지각 변동이 만들어낸 붉은 암벽이 12km에 걸쳐 펼쳐집니다.', image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80' },
   { key: 'attraction_2_image', name: '알틴아라샨', nameEn: 'Altyn Arashan', country: '키르기스스탄', tag: '트레킹', tagColor: 'bg-green-100 text-green-700', icon: '🌿', desc: '키르기스 비경의 극치. 눈 덮인 봉우리와 원시림, 맑은 계곡이 어우러진 트레킹 명소. 산악차량으로만 접근 가능한 자연의 보고.', image: 'https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=600&q=80' },
-  { key: 'attraction_3_image', name: '이식쿨 호수 크루즈', nameEn: 'Issyk-Kul Cruise', country: '키르기스스탄', tag: '크루즈', tagColor: 'bg-blue-100 text-blue-700', icon: '⛵', desc: '세계에서 두 번째로 큰 산악호수에서 핑거푸드와 음료를 즐기며 설산을 배경으로 한 절경을 만끽하는 유람선 체험.', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80' },
+  { key: 'attraction_3_image', name: '이식쿨 호수 크루즈', nameEn: 'Issyk-Kul Cruise', country: '키르기스스탄', tag: '크루즈', tagColor: 'bg-blue-100 text-blue-700', icon: '⛵', desc: '세계에서 두 번째로 큰 산악호수에서 핑거푸드와 음료를 즐기며 설산을 배경으로 한 절경을 만끽하는 유람선 체험. (수영복 개별 준비)', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80' },
   { key: 'attraction_4_image', name: '암각화 & 박물관', nameEn: 'Petroglyphs & Museum', country: '키르기스스탄', tag: '역사·문화', tagColor: 'bg-purple-100 text-purple-700', icon: '🏛️', desc: '수천 년 전 중앙아시아 유목민이 새긴 암각화와 이식쿨 지역의 역사·문화를 담은 르호드도 박물관. 실크로드 문명의 흔적.', image: 'https://images.unsplash.com/photo-1531219572328-a0171b4448a3?w=600&q=80' },
-  { key: 'attraction_5_image', name: '아크베르메트 노천온천', nameEn: 'Ak-Bermet Hot Springs', country: '키르기스스탄', tag: '온천·힐링', tagColor: 'bg-pink-100 text-pink-700', icon: '♨️', desc: '산간 대자연 속 노천온천에서 여행의 피로를 씻어내는 힐링 타임. 탁 트인 하늘 아래 유황온천을 즐기는 잊지 못할 경험.', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80' },
-  { key: 'attraction_6_image', name: '비슈케크 시내관광', nameEn: 'Bishkek City Tour', country: '키르기스스탄', tag: '도시관광', tagColor: 'bg-amber-100 text-amber-700', icon: '🏙️', desc: '키르기스스탄의 수도 비슈케크. 소련 시대 웅장한 건축물과 현대적 도심이 공존하는 매력적인 도시를 가이드와 함께 탐방.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80' },
+  { key: 'attraction_5_image', name: 'Issyk-Ata 노천유황온천', nameEn: 'Issyk-Ata Hot Springs', country: '키르기스스탄', tag: '온천·힐링', tagColor: 'bg-pink-100 text-pink-700', icon: '♨️', desc: '으슥아따(Issyk-Ata) 산간 대자연 속 노천유황온천. 바비큐 석식과 함께 유황온천·사우나를 즐기며 여행의 피로를 씻어내는 특별한 힐링 타임.', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80' },
+  { key: 'attraction_6_image', name: '침블락 케이블카', nameEn: 'Shymbulak Cable Car', country: '카자흐스탄', tag: '산악관광', tagColor: 'bg-amber-100 text-amber-700', icon: '🚡', desc: '알마티 외곽에 위치한 침블락 스키 리조트. 케이블카를 타고 해발 3,200m까지 올라 텐샨 산맥의 웅장한 파노라마를 감상하는 잊지 못할 고산 체험.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80' },
 ]
 
 const INCLUDES = ['전 일정 숙박 (호텔 2인 1실 기준)', '전 일정 대형버스 및 산악차량 가스66 2대', '한국어 가이드 1명 / 보조가이드 1명', '전 일정 식사 및 간식', '전 일정 입장료', '1억원 여행자 보험', '항공권 (ZE135/ZE136)']
@@ -111,9 +112,12 @@ const NOTICES = ['호텔은 현지 사정에 따라 동급 호텔로 변경될 �
 
 export default function LandingPage() {
   const [activeDay, setActiveDay] = useState(1)
+  const [showFlight, setShowFlight] = useState(false)
   const [photoIdx, setPhotoIdx] = useState(0)
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [heroVideoReady, setHeroVideoReady] = useState(false)
+  const [dayVideoReady, setDayVideoReady] = useState(false)
   const [form, setForm] = useState({ name: '', english_name: '', phone: '', gender: '', department: '', meal_pref: '', note: '', passport_image: '' })
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -139,7 +143,7 @@ export default function LandingPage() {
     fetch('/api/config').then(r => r.json()).then(setSiteConfig).catch(() => {})
   }, [])
 
-  useEffect(() => { setPhotoIdx(0) }, [activeDay])
+  useEffect(() => { setPhotoIdx(0); setDayVideoReady(false) }, [activeDay])
 
   function scrollTo(ref: React.RefObject<HTMLElement | null>) {
     ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -211,7 +215,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white">
 
       {/* GNB */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#0d2340]/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             {siteConfig.brand_logo
@@ -219,19 +223,20 @@ export default function LandingPage() {
               : <div className="w-10 h-10 bg-amber-400 rounded-lg flex items-center justify-center text-[#0d2340] font-black text-sm select-none">iS</div>
             }
             <div>
-              <div className="text-white font-bold text-sm leading-tight">아이스타홀딩스</div>
-              <div className="text-amber-400 text-[10px] font-medium tracking-wider">iStar Holdings</div>
+              <div className="text-[#0d2340] font-bold text-sm leading-tight">아이스타홀딩스</div>
+              <div className="text-amber-500 text-[10px] font-medium tracking-wider">iStar Holdings</div>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-1">
+            <a href="/kyrgyzstan" className="px-4 py-2 text-sm font-medium rounded-md bg-gray-700 text-white hover:bg-gray-600 transition-colors mr-1">About 키르기스스탄</a>
             {navItems.map(item => (
               <button key={item.label} onClick={() => scrollTo(item.ref)}
-                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${item.label === '참가신청' ? 'bg-amber-400 text-[#0d2340] font-bold hover:bg-amber-300 ml-2' : 'text-white/80 hover:text-white hover:bg-white/10'}`}>
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${item.label === '참가신청' ? 'bg-amber-400 text-[#0d2340] font-bold hover:bg-amber-300 ml-2' : 'bg-gray-700 text-white hover:bg-gray-600'}`}>
                 {item.label}
               </button>
             ))}
           </nav>
-          <button className="md:hidden text-white p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button className="md:hidden text-gray-700 p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen
               ? <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
               : <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
@@ -239,10 +244,13 @@ export default function LandingPage() {
           </button>
         </div>
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#0d2340] border-t border-white/10">
+          <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <a href="/kyrgyzstan" className="block w-full text-left px-6 py-3 text-gray-700 hover:text-white hover:bg-gray-700 text-sm font-medium transition-colors">
+              About 키르기스스탄
+            </a>
             {navItems.map(item => (
               <button key={item.label} onClick={() => scrollTo(item.ref)}
-                className="w-full text-left px-6 py-3 text-white/80 hover:text-white hover:bg-white/10 text-sm font-medium transition-colors">
+                className="w-full text-left px-6 py-3 text-gray-700 hover:text-white hover:bg-gray-700 text-sm font-medium transition-colors">
                 {item.label}
               </button>
             ))}
@@ -251,20 +259,22 @@ export default function LandingPage() {
       </header>
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* 배경: 영상 우선, 없으면 이미지 */}
-        {siteConfig.hero_video ? (
+      <section className="relative w-full aspect-video min-h-[280px] flex items-center justify-center overflow-hidden">
+        {/* 배경 이미지: 항상 base layer (영상 로딩 중 fallback) */}
+        <div
+          className="absolute inset-0"
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=1600&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+        />
+        {/* 영상: 준비 완료 시에만 페이드인 (버퍼링 화면 노출 없음) */}
+        {siteConfig.hero_video && (
           <video
-            autoPlay muted loop playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            key={siteConfig.hero_video}
+            autoPlay muted loop playsInline preload="auto"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${heroVideoReady ? 'opacity-100' : 'opacity-0'}`}
+            onCanPlay={() => setHeroVideoReady(true)}
           >
             <source src={siteConfig.hero_video} type="video/mp4" />
           </video>
-        ) : (
-          <div
-            className="absolute inset-0"
-            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=1600&q=90)', backgroundSize: 'cover', backgroundPosition: 'center' }}
-          />
         )}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0d2340]/70 via-[#0d2340]/50 to-[#0d2340]/85" />
         <div className="relative z-10 text-center px-4 animate-fadeInUp">
@@ -275,7 +285,7 @@ export default function LandingPage() {
             중앙아시아<br /><span className="text-amber-400">카자흐스탄 · 키르기스스탄</span>
           </h1>
           <p className="text-white/80 text-xl sm:text-2xl font-light mb-2">4박6일 첫 일정</p>
-          <p className="text-white/50 text-sm mb-10">차른협곡 · 알틴아라샨 · 이식쿨 호수 · 비슈케크 · 아이스타 본사 방문</p>
+          <p className="text-white/50 text-sm mb-10">차른협곡 · 알틴아라샨 · 이식쿨 호수 · 침블락</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <button onClick={() => scrollTo(applyRef)} className="px-8 py-3.5 bg-amber-400 hover:bg-amber-300 text-[#0d2340] font-bold rounded-xl text-base transition-all shadow-lg hover:-translate-y-0.5">
               참가 신청하기
@@ -299,7 +309,7 @@ export default function LandingPage() {
               { num: '02', icon: '⛵', title: '이식쿨 크루즈', sub: '세계 2위 산악호수\n유람선 & 핑거푸드' },
               { num: '03', icon: '♨️', title: '노천온천 힐링', sub: '설산 아래\n천연 유황온천' },
               { num: '04', icon: '🏨', title: '프리미엄 숙박', sub: '전 일정\n4~5성급 호텔' },
-              { num: '05', icon: '🤝', title: '회원 전용 스페셜', sub: '아이스타 본사 방문\n& 네트워킹' },
+              { num: '05', icon: '🤝', title: '회원 전용 스페셜', sub: '아이스타 회원전용\n& 네트워킹' },
             ].map(item => (
               <div key={item.num} className="flex flex-col items-center text-center px-3 py-5 rounded-xl border border-white/10 hover:border-amber-400/40 hover:bg-white/5 transition-all">
                 <div className="text-[20px] font-bold text-amber-400/50 tracking-widest mb-2">{item.num}</div>
@@ -313,136 +323,239 @@ export default function LandingPage() {
       </section>
 
       {/* 일정표 */}
-      <section ref={itineraryRef} className="py-20 bg-gray-50 scroll-mt-16">
+      <section ref={itineraryRef} className="py-12 bg-gray-50 scroll-mt-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <span className="inline-block bg-amber-400 text-[#0d2340] px-5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase shadow-sm">Itinerary</span>
             <h2 className="text-3xl sm:text-4xl font-black text-[#0d2340] mt-2">상세 일정표</h2>
           </div>
-          <div className="flex overflow-x-auto gap-2 mb-8 pb-2 justify-start md:justify-center">
+          <div className="flex overflow-x-auto gap-2 mb-5 pb-2 justify-start md:justify-center">
             {ITINERARY.map(it => (
-              <button key={it.day} onClick={() => setActiveDay(it.day)}
-                className={`flex-shrink-0 px-5 py-2.5 rounded-xl text-sm font-bold transition-all ${activeDay === it.day ? 'bg-[#0d2340] text-white shadow-lg' : 'bg-white text-gray-500 hover:bg-gray-100 border border-gray-200'}`}>
+              <button key={it.day} onClick={() => { setActiveDay(it.day); setShowFlight(false) }}
+                className={`flex-shrink-0 px-5 py-2.5 rounded-xl text-sm font-bold transition-all ${!showFlight && activeDay === it.day ? 'bg-[#0d2340] text-white shadow-lg' : 'bg-white text-gray-500 hover:bg-gray-100 border border-gray-200'}`}>
                 DAY {it.day}
-                <div className={`text-[10px] font-normal mt-0.5 ${activeDay === it.day ? 'text-amber-300' : 'text-gray-400'}`}>{it.date.replace('8월 ', '')}</div>
+                <div className={`text-[10px] font-normal mt-0.5 ${!showFlight && activeDay === it.day ? 'text-amber-300' : 'text-gray-400'}`}>{it.date.replace('8월 ', '')}</div>
               </button>
             ))}
+            <button onClick={() => setShowFlight(true)}
+              className={`flex-shrink-0 px-5 py-2.5 rounded-xl text-sm font-bold transition-all ${showFlight ? 'bg-amber-400 text-[#0d2340] shadow-lg' : 'bg-white text-gray-500 hover:bg-gray-100 border border-gray-200'}`}>
+              ✈️ 항공정보
+              <div className={`text-[10px] font-normal mt-0.5 ${showFlight ? 'text-[#0d2340]/70' : 'text-gray-400'}`}>ZE135/136</div>
+            </button>
           </div>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-            <div className="grid md:grid-cols-5">
-              <div className="md:col-span-2 relative h-64 md:h-auto min-h-[300px] overflow-hidden">
-                {/* 배경: 영상 우선, 없으면 이미지 캐러셀 */}
-                {dayVideo ? (
-                  <video key={dayVideo} autoPlay muted loop playsInline className="w-full h-full object-cover" >
-                    <source src={dayVideo} type="video/mp4" />
-                  </video>
-                ) : (
+          {showFlight ? (
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="grid md:grid-cols-5">
+                {/* 좌측 헤더 패널 - 항공 사진 배경 */}
+                <div className="md:col-span-2 relative h-56 md:h-auto min-h-[260px] overflow-hidden bg-[#1a3a6e]">
+                  <img src="/flight.jpg" alt="이스타항공" className="absolute inset-0 w-full h-full object-contain" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#0d2340]/60 via-transparent to-[#0d2340]/40" />
+                  <div className="absolute top-4 right-4 text-right">
+                    <div className="text-amber-400 text-[10px] font-bold tracking-widest uppercase mb-0.5">Flight Information</div>
+                    <div className="text-white text-base font-black">항공 운항 정보</div>
+                    <div className="text-white/70 text-xs mt-1">이스타항공 (ZE)</div>
+                    <div className="text-white/60 text-xs">인천 ↔ 알마티 직항</div>
+                    <div className="mt-2 flex gap-1.5 justify-end">
+                      <span className="bg-black/30 text-white/80 text-[10px] font-mono px-2 py-0.5 rounded-full backdrop-blur-sm">ZE135</span>
+                      <span className="bg-black/30 text-white/80 text-[10px] font-mono px-2 py-0.5 rounded-full backdrop-blur-sm">ZE136</span>
+                    </div>
+                  </div>
+                </div>
+                {/* 우측 콘텐츠 */}
+                <div className="md:col-span-3 p-5 sm:p-6 space-y-3">
+                  {/* 가는 편 */}
+                  <div className="border border-blue-100 rounded-xl overflow-hidden">
+                    <div className="bg-blue-50 px-3 py-1.5 flex items-center gap-2">
+                      <span className="text-blue-600 font-bold text-xs">가는 편 ZE135</span>
+                      <span className="ml-auto text-gray-400 text-xs">8월 18일 (화)</span>
+                    </div>
+                    <div className="px-4 py-3 flex items-center justify-between">
+                      <div className="text-center">
+                        <div className="text-xl font-black text-[#0d2340]">19:25</div>
+                        <div className="text-xs font-bold text-gray-600">ICN · 인천</div>
+                      </div>
+                      <div className="flex-1 px-3 text-center">
+                        <div className="text-[10px] text-gray-400 mb-1">약 6시간 15분</div>
+                        <div className="flex items-center"><div className="flex-1 h-px bg-gray-200"/><span className="mx-1.5 text-amber-400 text-sm">✈</span><div className="flex-1 h-px bg-gray-200"/></div>
+                        <div className="text-[10px] text-gray-300 mt-1">직항</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xl font-black text-[#0d2340]">22:40</div>
+                        <div className="text-xs font-bold text-gray-600">ALA · 알마티</div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* 오는 편 */}
+                  <div className="border border-amber-100 rounded-xl overflow-hidden">
+                    <div className="bg-amber-50 px-3 py-1.5 flex items-center gap-2">
+                      <span className="text-amber-600 font-bold text-xs">오는 편 ZE136</span>
+                      <span className="ml-auto text-gray-400 text-xs">8월 22일 (토) → 23일 (일)</span>
+                    </div>
+                    <div className="px-4 py-3 flex items-center justify-between">
+                      <div className="text-center">
+                        <div className="text-xl font-black text-[#0d2340]">23:40</div>
+                        <div className="text-xs font-bold text-gray-600">ALA · 알마티</div>
+                      </div>
+                      <div className="flex-1 px-3 text-center">
+                        <div className="text-[10px] text-gray-400 mb-1">약 7시간 25분</div>
+                        <div className="flex items-center"><div className="flex-1 h-px bg-gray-200"/><span className="mx-1.5 text-amber-400 text-sm">✈</span><div className="flex-1 h-px bg-gray-200"/></div>
+                        <div className="text-[10px] text-gray-300 mt-1">직항</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-xl font-black text-[#0d2340]">10:05 <span className="text-sm text-amber-500">+1</span></div>
+                        <div className="text-xs font-bold text-gray-600">ICN · 인천</div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* 수하물 */}
+                  <div className="bg-gray-50 rounded-xl px-4 py-3 flex items-center gap-4">
+                    <span className="text-lg">🧳</span>
+                    <div className="flex gap-5 flex-1">
+                      <div>
+                        <div className="text-[10px] text-gray-400">위탁 수하물</div>
+                        <div className="font-black text-[#0d2340] text-base">15kg</div>
+                        <div className="text-[10px] text-gray-400">1인 1개</div>
+                      </div>
+                      <div className="w-px bg-gray-200" />
+                      <div>
+                        <div className="text-[10px] text-gray-400">기내 수하물</div>
+                        <div className="font-black text-[#0d2340] text-base">10kg</div>
+                        <div className="text-[10px] text-gray-400">115cm 이하</div>
+                      </div>
+                    </div>
+                    <div className="text-[10px] text-gray-300 hidden sm:block">※ 규정은 변경될 수 있습니다</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="grid md:grid-cols-5">
+                <div className="md:col-span-2 relative h-56 md:h-auto min-h-[260px] overflow-hidden">
                   <img
                     key={displayImgs[safeIdx]}
                     src={displayImgs[safeIdx]}
                     alt={cur.regions}
-                    className="w-full h-full object-cover transition-opacity duration-300"
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
                   />
-                )}
-
-                {/* 캐러셀 컨트롤 (이미지 2장 이상일 때만) */}
-                {!dayVideo && displayImgs.length > 1 && (
-                  <>
-                    <button
-                      onClick={() => setPhotoIdx(i => (i - 1 + displayImgs.length) % displayImgs.length)}
-                      className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center text-white text-xs transition-colors"
-                    >‹</button>
-                    <button
-                      onClick={() => setPhotoIdx(i => (i + 1) % displayImgs.length)}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center text-white text-xs transition-colors"
-                    >›</button>
-                    <div className="absolute bottom-[72px] left-0 right-0 flex justify-center gap-1.5 z-10">
-                      {displayImgs.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => setPhotoIdx(i)}
-                          className={`w-1.5 h-1.5 rounded-full transition-all ${i === safeIdx ? 'bg-white scale-125' : 'bg-white/40 hover:bg-white/70'}`}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d2340]/80 to-transparent flex flex-col justify-end p-6">
-                  <div className="text-amber-400 text-xs font-bold tracking-widest uppercase mb-1">DAY {cur.day} · {cur.date}</div>
-                  <div className="text-white text-xl font-black">{cur.regions}</div>
-                  <div className="text-white/70 text-sm mt-1">{cur.highlight}</div>
+                  {dayVideo && (
+                    <video
+                      key={dayVideo}
+                      autoPlay muted loop playsInline preload="auto"
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${dayVideoReady ? 'opacity-100' : 'opacity-0'}`}
+                      onCanPlay={() => setDayVideoReady(true)}
+                    >
+                      <source src={dayVideo} type="video/mp4" />
+                    </video>
+                  )}
+                  {!dayVideo && displayImgs.length > 1 && (
+                    <>
+                      <button
+                        onClick={() => setPhotoIdx(i => (i - 1 + displayImgs.length) % displayImgs.length)}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center text-white text-xs transition-colors"
+                      >‹</button>
+                      <button
+                        onClick={() => setPhotoIdx(i => (i + 1) % displayImgs.length)}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center text-white text-xs transition-colors"
+                      >›</button>
+                      <div className="absolute bottom-[72px] left-0 right-0 flex justify-center gap-1.5 z-10">
+                        {displayImgs.map((_, i) => (
+                          <button
+                            key={i}
+                            onClick={() => setPhotoIdx(i)}
+                            className={`w-1.5 h-1.5 rounded-full transition-all ${i === safeIdx ? 'bg-white scale-125' : 'bg-white/40 hover:bg-white/70'}`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d2340]/80 to-transparent flex flex-col justify-end p-6">
+                    <div className="text-amber-400 text-xs font-bold tracking-widest uppercase mb-1">DAY {cur.day} · {cur.date}</div>
+                    <div className="text-white text-xl font-black">{cur.regions}</div>
+                    <div className="text-white/70 text-sm mt-1">{cur.highlight}</div>
+                  </div>
                 </div>
-              </div>
-              <div className="md:col-span-3 p-6 sm:p-8">
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#0d2340]/5 text-[#0d2340] rounded-full text-xs font-semibold">🚌 {cur.transport}</span>
-                  {cur.mealDetail && <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-semibold">🍽️ {cur.mealDetail}</span>}
-                </div>
-                <div className="space-y-3 mb-6">
-                  {cur.schedules.map((s, i) => (
-                    <div key={i} className="flex gap-3 items-start">
-                      <div className="w-14 shrink-0 text-right"><span className="text-xs font-mono text-amber-600 font-bold">{s.time}</span></div>
-                      <div className="flex items-start gap-2 flex-1">
-                        <div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
-                        <span className="text-sm text-gray-700 leading-relaxed">{s.desc}</span>
+                <div className="md:col-span-3 p-5 sm:p-6">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#0d2340]/5 text-[#0d2340] rounded-full text-xs font-semibold">🚌 {cur.transport}</span>
+                    {cur.mealDetail && <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-semibold">🍽️ {cur.mealDetail}</span>}
+                  </div>
+                  <div className="space-y-2.5 mb-4">
+                    {cur.schedules.map((s, i) => (
+                      <div key={i} className="flex gap-3 items-start">
+                        <div className="w-14 shrink-0 text-right"><span className="text-xs font-mono text-amber-600 font-bold">{s.time}</span></div>
+                        <div className="flex items-start gap-2 flex-1">
+                          <div className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
+                          <span className="text-sm text-gray-700 leading-relaxed">{s.desc}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  {cur.hotel && cur.hotel.stars > 0 && (
+                    <div className="bg-[#0d2340]/5 rounded-xl p-4 flex items-center gap-3">
+                      <div className="text-2xl">🏨</div>
+                      <div>
+                        <div className="text-xs text-gray-400 mb-0.5">숙소</div>
+                        <div className="font-bold text-[#0d2340] text-sm">{cur.hotel.nameKo}</div>
+                        <div className="flex items-center gap-2 mt-0.5">
+                          <span className="text-amber-400 text-sm">{'★'.repeat(cur.hotel.stars)}</span>
+                          <span className="text-xs text-gray-400">{cur.hotel.location}</span>
+                        </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-                {cur.hotel && cur.hotel.stars > 0 && (
-                  <div className="bg-[#0d2340]/5 rounded-xl p-4 flex items-center gap-3">
-                    <div className="text-2xl">🏨</div>
-                    <div>
-                      <div className="text-xs text-gray-400 mb-0.5">숙소</div>
-                      <div className="font-bold text-[#0d2340] text-sm">{cur.hotel.nameKo}</div>
-                      <div className="flex items-center gap-2 mt-0.5">
-                        <span className="text-amber-400 text-sm">{'★'.repeat(cur.hotel.stars)}</span>
-                        <span className="text-xs text-gray-400">{cur.hotel.location}</span>
-                      </div>
+                  )}
+                  {cur.hotel && cur.hotel.stars === 0 && (
+                    <div className="bg-gray-50 rounded-xl p-4 flex items-center gap-3">
+                      <div className="text-2xl">✈️</div>
+                      <div className="text-sm text-gray-500">기내 숙박 — ZE136 귀국편 탑승</div>
                     </div>
-                  </div>
-                )}
-                {cur.hotel && cur.hotel.stars === 0 && (
-                  <div className="bg-gray-50 rounded-xl p-4 flex items-center gap-3">
-                    <div className="text-2xl">✈️</div>
-                    <div className="text-sm text-gray-500">기내 숙박 — ZE136 귀국편 탑승</div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          )}
           <div className="flex justify-center gap-3 mt-6">
-            <button onClick={() => setActiveDay(d => Math.max(1, d - 1))} disabled={activeDay === 1}
-              className="px-5 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-30 transition-all">← 이전 일정</button>
-            <button onClick={() => setActiveDay(d => Math.min(6, d + 1))} disabled={activeDay === 6}
-              className="px-5 py-2 bg-[#0d2340] text-white rounded-lg text-sm font-semibold hover:bg-[#0d2340]/90 disabled:opacity-30 transition-all">다음 일정 →</button>
+            {showFlight ? (
+              <button onClick={() => { setActiveDay(6); setShowFlight(false) }}
+                className="px-5 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-all">← DAY 6으로</button>
+            ) : (
+              <>
+                <button onClick={() => setActiveDay(d => Math.max(1, d - 1))} disabled={activeDay === 1}
+                  className="px-5 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 disabled:opacity-30 transition-all">← 이전 일정</button>
+                {activeDay === 6
+                  ? <button onClick={() => setShowFlight(true)}
+                      className="px-5 py-2 bg-amber-400 text-[#0d2340] rounded-lg text-sm font-semibold hover:bg-amber-300 transition-all">✈️ 항공정보 보기</button>
+                  : <button onClick={() => setActiveDay(d => Math.min(6, d + 1))}
+                      className="px-5 py-2 bg-[#0d2340] text-white rounded-lg text-sm font-semibold hover:bg-[#0d2340]/90 transition-all">다음 일정 →</button>
+                }
+              </>
+            )}
           </div>
         </div>
       </section>
 
       {/* 호텔 정보 */}
-      <section ref={hotelsRef} className="py-20 bg-white scroll-mt-16">
+      <section ref={hotelsRef} className="py-12 bg-white scroll-mt-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <span className="inline-block bg-amber-400 text-[#0d2340] px-5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase shadow-sm">Accommodation</span>
             <h2 className="text-3xl sm:text-4xl font-black text-[#0d2340] mt-2">호텔 정보</h2>
             <p className="text-gray-400 mt-2 text-sm">전 일정 4~5성급 호텔, 2인 1실 기준</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {HOTELS_BASE.map(h => {
               const image = siteConfig[h.key] || h.fallback
               return (
               <div key={h.name} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow group">
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-36 overflow-hidden">
                   <img src={image} alt={h.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-3 left-3"><span className="bg-[#0d2340] text-white text-[11px] font-bold px-2.5 py-1 rounded-full">{h.night}</span></div>
                   <div className="absolute top-3 right-3"><span className="bg-amber-400 text-[#0d2340] text-[11px] font-bold px-2 py-1 rounded-full">{'★'.repeat(h.stars)}</span></div>
                 </div>
-                <div className="p-4">
-                  <div className="text-[11px] text-amber-600 font-semibold mb-1">{h.location}</div>
-                  <div className="font-bold text-[#0d2340] text-sm mb-1">{h.nameKo}</div>
-                  <div className="text-gray-400 text-[11px] mb-3">{h.name}</div>
+                <div className="p-3">
+                  <div className="text-[11px] text-amber-600 font-semibold mb-0.5">{h.location}</div>
+                  <div className="font-bold text-[#0d2340] text-sm mb-0.5">{h.nameKo}</div>
+                  <div className="text-gray-400 text-[11px] mb-2">{h.name}</div>
                   <p className="text-gray-500 text-xs leading-relaxed">{h.desc}</p>
                 </div>
               </div>
@@ -453,17 +566,17 @@ export default function LandingPage() {
       </section>
 
       {/* 관광지 */}
-      <section ref={attractionsRef} className="py-20 bg-gray-50 scroll-mt-16">
+      <section ref={attractionsRef} className="py-12 bg-gray-50 scroll-mt-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <span className="inline-block bg-amber-400 text-[#0d2340] px-5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase shadow-sm">Attractions</span>
             <h2 className="text-3xl sm:text-4xl font-black text-[#0d2340] mt-2">주요 관광지</h2>
             <p className="text-gray-400 mt-2 text-sm">중앙아시아의 숨겨진 보석을 만나다</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {ATTRACTIONS.map(a => (
               <div key={a.name} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all group">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
                   <img src={siteConfig[a.key] || a.image} alt={a.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute bottom-3 left-4 flex items-center gap-2">
@@ -475,8 +588,8 @@ export default function LandingPage() {
                   </div>
                   <div className="absolute top-3 right-3"><span className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${a.tagColor}`}>{a.tag}</span></div>
                 </div>
-                <div className="p-5">
-                  <div className="text-[11px] text-gray-400 mb-2 font-medium">📍 {a.country}</div>
+                <div className="p-4">
+                  <div className="text-[11px] text-gray-400 mb-1 font-medium">📍 {a.country}</div>
                   <p className="text-gray-600 text-sm leading-relaxed">{a.desc}</p>
                 </div>
               </div>
@@ -486,18 +599,18 @@ export default function LandingPage() {
       </section>
 
       {/* 안내사항 */}
-      <section ref={infoRef} className="py-20 bg-white scroll-mt-16">
+      <section ref={infoRef} className="py-12 bg-white scroll-mt-16">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <span className="inline-block bg-amber-400 text-[#0d2340] px-5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase shadow-sm">Information</span>
             <h2 className="text-3xl sm:text-4xl font-black text-[#0d2340] mt-2">안내사항</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-green-50 border border-green-100 rounded-2xl p-6">
-              <h3 className="font-black text-green-800 text-lg mb-4 flex items-center gap-2">
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
+            <div className="bg-green-50 border border-green-100 rounded-2xl p-5">
+              <h3 className="font-black text-green-800 text-lg mb-3 flex items-center gap-2">
                 <span className="w-7 h-7 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold">✓</span>포함사항
               </h3>
-              <ul className="space-y-2.5">
+              <ul className="space-y-2">
                 {INCLUDES.map(item => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-green-800">
                     <span className="text-green-500 mt-0.5 shrink-0">✓</span>{item}
@@ -505,11 +618,11 @@ export default function LandingPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-red-50 border border-red-100 rounded-2xl p-6">
-              <h3 className="font-black text-red-800 text-lg mb-4 flex items-center gap-2">
+            <div className="bg-red-50 border border-red-100 rounded-2xl p-5">
+              <h3 className="font-black text-red-800 text-lg mb-3 flex items-center gap-2">
                 <span className="w-7 h-7 bg-red-400 rounded-full flex items-center justify-center text-white text-sm font-bold">✗</span>불포함사항
               </h3>
-              <ul className="space-y-2.5">
+              <ul className="space-y-2">
                 {EXCLUDES.map(item => (
                   <li key={item} className="flex items-start gap-2.5 text-sm text-red-800">
                     <span className="text-red-400 mt-0.5 shrink-0">✗</span>{item}
@@ -518,8 +631,8 @@ export default function LandingPage() {
               </ul>
             </div>
           </div>
-          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6">
-            <h3 className="font-black text-amber-800 text-base mb-4 flex items-center gap-2"><span>⚠️</span> 유의사항</h3>
+          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-5">
+            <h3 className="font-black text-amber-800 text-base mb-3 flex items-center gap-2"><span>⚠️</span> 유의사항</h3>
             <ul className="grid sm:grid-cols-2 gap-2">
               {NOTICES.map(item => (
                 <li key={item} className="flex items-start gap-2 text-sm text-amber-800">
@@ -532,9 +645,9 @@ export default function LandingPage() {
       </section>
 
       {/* 참가 신청 */}
-      <section ref={applyRef} className="py-20 bg-[#0d2340] scroll-mt-16">
+      <section ref={applyRef} id="apply" className="py-12 bg-[#0d2340] scroll-mt-16">
         <div className="max-w-xl mx-auto px-4">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <span className="inline-block bg-amber-400 text-[#0d2340] px-5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase shadow-sm">Apply</span>
             <h2 className="text-3xl sm:text-4xl font-black text-white mt-2">참가 신청</h2>
             <p className="text-white/50 mt-2 text-sm">신청 후 담당자가 개별 연락 드립니다.</p>
@@ -627,7 +740,7 @@ export default function LandingPage() {
               {/* 문의처 */}
               <div className="pt-2 border-t border-white/10 text-center">
                 <p className="text-white/40 text-xs">문의사항</p>
-                <p className="text-white/70 text-sm font-semibold mt-0.5">오트래블 강래구 팀장 · 010-7107-4613</p>
+                <p className="text-white/70 text-sm font-semibold mt-0.5">(주)아이스타홀딩스 여행 상담 | 강래구 팀장 | ☎ 010-7107-4613</p>
               </div>
             </form>
           )}
@@ -648,7 +761,7 @@ export default function LandingPage() {
       </a>
 
       {/* FOOTER */}
-      <footer className="bg-[#07162a] py-10">
+      <footer className="bg-white border-t border-gray-200 py-6">
         <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             {siteConfig.brand_logo
@@ -656,14 +769,14 @@ export default function LandingPage() {
               : <div className="w-9 h-9 bg-amber-400 rounded-lg flex items-center justify-center text-[#0d2340] font-black text-sm">iS</div>
             }
             <div>
-              <div className="text-white font-bold text-sm">주식회사 아이스타홀딩스</div>
-              <div className="text-white/40 text-[11px]">iStar Holdings Co., Ltd.</div>
+              <div className="text-gray-900 font-bold text-sm">주식회사 아이스타홀딩스</div>
+              <div className="text-gray-400 text-[11px]">iStar Holdings Co., Ltd.</div>
             </div>
           </div>
           <div className="flex flex-col items-center sm:items-end gap-1 text-right">
-            <div className="text-white/50 text-xs">031-8027-9071 · helper@istarholdings.kr</div>
-            <div className="text-white/30 text-[11px]">경기도 하남시 미사강변중앙로 214, 701호</div>
-            <div className="text-white/20 text-[11px] mt-1">© 2026 iStar Holdings. All rights reserved.</div>
+            <div className="text-gray-600 text-xs">031-8027-9071 · helper@istarholdings.kr</div>
+            <div className="text-gray-400 text-[11px]">경기도 하남시 미사강변중앙로 214, 701호</div>
+            <div className="text-gray-300 text-[11px] mt-1">© 2026 iStar Holdings. All rights reserved.</div>
           </div>
         </div>
       </footer>
