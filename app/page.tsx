@@ -150,6 +150,19 @@ export default function LandingPage() {
     setMobileMenuOpen(false)
   }
 
+  function formatPhone(value: string) {
+    const digits = value.replace(/\D/g, '').slice(0, 11)
+    if (digits.length < 4) return digits
+    if (digits.startsWith('02')) {
+      if (digits.length < 7) return `${digits.slice(0, 2)}-${digits.slice(2)}`
+      if (digits.length < 10) return `${digits.slice(0, 2)}-${digits.slice(2, 5)}-${digits.slice(5)}`
+      return `${digits.slice(0, 2)}-${digits.slice(2, 6)}-${digits.slice(6)}`
+    }
+    if (digits.length < 8) return `${digits.slice(0, 3)}-${digits.slice(3)}`
+    if (digits.length < 11) return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`
+    return `${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`
+  }
+
   async function handlePassport(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0]
     if (!file) return
@@ -426,6 +439,25 @@ export default function LandingPage() {
                     </div>
                     <div className="text-[10px] text-gray-300 hidden sm:block">※ 규정은 변경될 수 있습니다</div>
                   </div>
+                  {/* 기내식 */}
+                  <div className="bg-orange-50 border border-orange-100 rounded-xl px-4 py-3 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <span className="text-lg">🍱</span>
+                      <div>
+                        <div className="text-[10px] text-gray-400">기내식</div>
+                        <div className="font-black text-[#0d2340] text-base">유료</div>
+                        <div className="text-[10px] text-gray-400">사전 구매 시 할인 혜택</div>
+                      </div>
+                    </div>
+                    <a
+                      href="https://www.eastarjet.com/newstar/PGWIS00001"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0 px-3 py-1.5 bg-orange-400 hover:bg-orange-500 text-white text-xs font-bold rounded-lg transition-colors"
+                    >
+                      사전 구매 →
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -606,6 +638,28 @@ export default function LandingPage() {
             <span className="inline-block bg-amber-400 text-[#0d2340] px-5 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase shadow-sm">Information</span>
             <h2 className="text-3xl sm:text-4xl font-black text-[#0d2340] mt-2">안내사항</h2>
           </div>
+          <div className="bg-[#0d2340] rounded-2xl p-5 mb-4">
+            <h3 className="font-black text-white text-base mb-4 flex items-center gap-2"><span>💳</span> 상품가 &amp; 입금 안내</h3>
+            <div className="grid sm:grid-cols-3 gap-3">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                <div className="text-white/40 text-[11px] font-semibold tracking-widest uppercase mb-1.5">1인당 상품가</div>
+                <div className="text-amber-400 font-black text-3xl">286만원</div>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                <div className="text-white/40 text-[11px] font-semibold tracking-widest uppercase mb-1.5">입금 계좌</div>
+                <div className="text-white font-bold text-lg">우리은행</div>
+                <div className="text-amber-300 font-mono text-base mt-0.5">1005-604-698509</div>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                <div className="text-white/40 text-[11px] font-semibold tracking-widest uppercase mb-1.5">예금주</div>
+                <div className="text-white font-bold text-lg">(주)아이스타홀딩스</div>
+              </div>
+            </div>
+            <div className="mt-3 bg-red-500/20 border border-red-400/30 rounded-xl px-4 py-3 flex items-center justify-center gap-2">
+              <span className="text-red-300 text-sm">⏰</span>
+              <span className="text-red-200 text-sm font-bold">입금마감일: 6/5(금)</span>
+            </div>
+          </div>
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="bg-green-50 border border-green-100 rounded-2xl p-5">
               <h3 className="font-black text-green-800 text-lg mb-3 flex items-center gap-2">
@@ -679,7 +733,7 @@ export default function LandingPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-white/70 text-xs font-semibold mb-1.5">연락처 <span className="text-amber-400">*</span></label>
-                  <input type="tel" value={form.phone} onChange={e => setForm(p => ({ ...p, phone: e.target.value }))} placeholder="010-0000-0000"
+                  <input type="tel" value={form.phone} onChange={e => setForm(p => ({ ...p, phone: formatPhone(e.target.value) }))} placeholder="010-0000-0000"
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-3.5 py-2.5 text-white text-sm placeholder-white/30 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors" />
                 </div>
                 <div>

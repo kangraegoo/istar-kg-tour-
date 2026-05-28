@@ -33,3 +33,13 @@ export async function GET() {
   const rows = await db`SELECT * FROM tour_applications ORDER BY created_at DESC`
   return NextResponse.json(rows)
 }
+
+export async function DELETE(req: Request) {
+  const { ids } = await req.json()
+  if (!Array.isArray(ids) || ids.length === 0) {
+    return NextResponse.json({ error: '삭제할 ID가 없습니다.' }, { status: 400 })
+  }
+  const db = sql()
+  await db`DELETE FROM tour_applications WHERE id = ANY(${ids}::int[])`
+  return NextResponse.json({ ok: true })
+}
